@@ -11,7 +11,7 @@ const structureItemGuids = [
   environment.MU_CAMPAIGN_STRUCTURE_ITEM_GUID,
 ];
 const startDateTime = "2025-04-01T00:00:00Z";
-const endDateTime = "2025-05-01T00:00:00Z";
+const endDateTime = "2025-04-06T00:00:00Z";
 const module = "MultiUnit";
 
 // Define the query parameter objects

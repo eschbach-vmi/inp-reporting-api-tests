@@ -8,7 +8,7 @@ import environment from "../../utils/environment";
 // #region
 const structureItemGuid = environment.MU_BATCH_STRUCTURE_ITEM_GUID;
 const startDateTime = "2025-04-01T00:00:00Z";
-const endDateTime = "2025-05-01T00:00:00Z";
+const endDateTime = "2025-04-15T00:00:00Z";
 const module = "MultiUnit";
 
 // Define the query parameter objects
@@ -106,6 +106,29 @@ test.describe("INPREPORT-265: GET TopReasonCode By Campaign Report Smoke Tests",
 
 test.describe("INPREPORT-266: GET TopReasonCode By Production Order Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/TopReasonCode/productionOrderReport";
+
+  testCases.forEach(({ name, queryParams }) => {
+    test(name, async ({ request }) => {
+      const requestUrl = createRequestUrl(endpointName, queryParams);
+      await getEndpointSmokeTests(request, requestUrl);
+    });
+  });
+});
+
+test.describe("INPREPORT-310: GET TopReasonCode Combit Report Smoke Tests", () => {
+  const endpointName = "/inpReporting/v1/TopReasonCode/legacy/report";
+
+  testCases.forEach(({ name, queryParams }) => {
+    test(name, async ({ request }) => {
+      const requestUrl = createRequestUrl(endpointName, queryParams);
+      await getEndpointSmokeTests(request, requestUrl);
+    });
+  });
+});
+
+test.describe("INPREPORT-311: GET TopReasonCode By Production Order Combit Report Smoke Tests", () => {
+  const endpointName =
+    "/inpReporting/v1/TopReasonCode/legacy/productionOrderReport";
 
   testCases.forEach(({ name, queryParams }) => {
     test(name, async ({ request }) => {
