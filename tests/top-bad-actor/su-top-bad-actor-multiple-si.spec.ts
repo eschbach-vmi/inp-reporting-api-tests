@@ -7,12 +7,12 @@ import environment from "../../utils/environment";
 
 // #region
 const structureItemGuids = [
-  environment.MU_BATCH_STRUCTURE_ITEM_GUID,
-  environment.MU_CAMPAIGN_STRUCTURE_ITEM_GUID,
+  environment.SU_PRODUCTION_STRUCTURE_ITEM_GUID,
+  environment.SU_DOWNTIME_STRUCTURE_ITEM_GUID,
 ];
 const startDateTime = "2025-04-01T00:00:00Z";
 const endDateTime = "2025-04-06T00:00:00Z";
-const module = "MultiUnit";
+const module = "SingleUnit";
 
 // Define the query parameter objects
 const queryParamsBase = {
@@ -62,7 +62,7 @@ const testCases = [
 ];
 // #endregion
 
-test.describe("@multi INPREPORT-272: GET TopBadActor Report Smoke Tests", () => {
+test.describe("@single INPREPORT-272: GET TopBadActor Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/TopBadActor/reports";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -77,7 +77,7 @@ test.describe("@multi INPREPORT-272: GET TopBadActor Report Smoke Tests", () => 
   });
 });
 
-test.describe("@multi INPREPORT-273: GET TopBadActor By Day Report Smoke Tests", () => {
+test.describe("@single INPREPORT-273: GET TopBadActor By Day Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/TopBadActor/dayReports";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -92,7 +92,7 @@ test.describe("@multi INPREPORT-273: GET TopBadActor By Day Report Smoke Tests",
   });
 });
 
-test.describe("@multi INPREPORT-274: GET TopBadActor By Shift Report Smoke Tests", () => {
+test.describe("@single INPREPORT-274: GET TopBadActor By Shift Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/TopBadActor/shiftReports";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -107,7 +107,7 @@ test.describe("@multi INPREPORT-274: GET TopBadActor By Shift Report Smoke Tests
   });
 });
 
-test.describe("@multi INPREPORT-275: GET TopBadActor By Campaign Report Smoke Tests", () => {
+test.describe("@single INPREPORT-275: GET TopBadActor By Campaign Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/TopBadActor/campaignReports";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -122,7 +122,7 @@ test.describe("@multi INPREPORT-275: GET TopBadActor By Campaign Report Smoke Te
   });
 });
 
-test.describe("@multi INPREPORT-276: GET TopBadActor By Production Order Report Smoke Tests", () => {
+test.describe("@single INPREPORT-276: GET TopBadActor By Production Order Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/TopBadActor/productionOrderReports";
 
   testCases.forEach(({ name, queryParams }) => {

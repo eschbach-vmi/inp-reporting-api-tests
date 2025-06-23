@@ -6,6 +6,8 @@ const environmentSchema = z.object({
   SERVICE_USER_PASSWORD: z.string(),
   MU_BATCH_STRUCTURE_ITEM_GUID: z.string().uuid(),
   MU_CAMPAIGN_STRUCTURE_ITEM_GUID: z.string().uuid(),
+  SU_PRODUCTION_STRUCTURE_ITEM_GUID: z.string().uuid(),
+  SU_DOWNTIME_STRUCTURE_ITEM_GUID: z.string().uuid(),
 });
 
 const environment = environmentSchema.parse(process.env);

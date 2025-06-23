@@ -62,7 +62,7 @@ const testCases = [
 ];
 // #endregion
 
-test.describe("INPREPORT-267: GET Waterfall Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-267: GET Waterfall Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/Waterfall/reports";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -77,7 +77,7 @@ test.describe("INPREPORT-267: GET Waterfall Report Smoke Tests", () => {
   });
 });
 
-test.describe("INPREPORT-268: GET Waterfall By Day Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-268: GET Waterfall By Day Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/Waterfall/dayReports";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -92,7 +92,7 @@ test.describe("INPREPORT-268: GET Waterfall By Day Report Smoke Tests", () => {
   });
 });
 
-test.describe("INPREPORT-269: GET Waterfall By Shift Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-269: GET Waterfall By Shift Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/Waterfall/shiftReports";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -107,7 +107,7 @@ test.describe("INPREPORT-269: GET Waterfall By Shift Report Smoke Tests", () => 
   });
 });
 
-test.describe("INPREPORT-270: GET Waterfall By Campaign Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-270: GET Waterfall By Campaign Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/Waterfall/campaignReports";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -122,7 +122,7 @@ test.describe("INPREPORT-270: GET Waterfall By Campaign Report Smoke Tests", () 
   });
 });
 
-test.describe("INPREPORT-271: GET Waterfall By Production Order Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-271: GET Waterfall By Production Order Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/Waterfall/productionOrderReports";
 
   testCases.forEach(({ name, queryParams }) => {

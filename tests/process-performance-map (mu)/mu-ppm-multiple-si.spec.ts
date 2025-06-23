@@ -22,7 +22,7 @@ const queryParamsBase = {
 };
 // #endregion
 
-test.describe("INPREPORT-295: GET ProcessPerformanceMap Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-295: GET ProcessPerformanceMap Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/ProcessPerformanceMap/reports";
 
   test("positive case", async ({ request }) => {
@@ -35,7 +35,7 @@ test.describe("INPREPORT-295: GET ProcessPerformanceMap Report Smoke Tests", () 
   });
 });
 
-test.describe("INPREPORT-296: GET ProcessPerformanceMap By Day Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-296: GET ProcessPerformanceMap By Day Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/ProcessPerformanceMap/dayReports";
 
   test("positive case", async ({ request }) => {
@@ -48,7 +48,7 @@ test.describe("INPREPORT-296: GET ProcessPerformanceMap By Day Report Smoke Test
   });
 });
 
-test.describe("INPREPORT-297: GET ProcessPerformanceMap By Shift Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-297: GET ProcessPerformanceMap By Shift Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/ProcessPerformanceMap/shiftReports";
 
   test("positive case", async ({ request }) => {
@@ -61,7 +61,7 @@ test.describe("INPREPORT-297: GET ProcessPerformanceMap By Shift Report Smoke Te
   });
 });
 
-test.describe("INPREPORT-298: GET ProcessPerformanceMap By Campaign Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-298: GET ProcessPerformanceMap By Campaign Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/ProcessPerformanceMap/campaignReports";
 
   test("positive case", async ({ request }) => {
@@ -74,7 +74,7 @@ test.describe("INPREPORT-298: GET ProcessPerformanceMap By Campaign Report Smoke
   });
 });
 
-test.describe("INPREPORT-299: GET ProcessPerformanceMap By Production Order Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-299: GET ProcessPerformanceMap By Production Order Report Smoke Tests", () => {
   const endpointName =
     "/inpReporting/v1/ProcessPerformanceMap/productionOrderReports";
 

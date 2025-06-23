@@ -2,4 +2,8 @@
 
 This project contains Playwright tests for smoke testing INP-Reporting APIs: Waterfall, Top Bad Actor, Top Reason Code report endpoints. It uses a data-driven approach with helper functions for URL construction and response validation.
 
-!!! Before run tests check the baseURL and authorization in playwright.config.ts file. 
+!!! Before run tests check the baseURL and authorization in playwright.config.ts file.
+
+You can run separately test cases for different module:
+npx playwright test --grep "@single"
+npx playwright test --grep "@multi"

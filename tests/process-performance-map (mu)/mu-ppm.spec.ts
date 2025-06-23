@@ -20,7 +20,7 @@ const queryParamsBase = {
 };
 // #endregion
 
-test.describe("INPREPORT-290: GET ProcessPerformanceMap Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-290: GET ProcessPerformanceMap Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/ProcessPerformanceMap/report";
 
   test("positive case", async ({ request }) => {
@@ -29,7 +29,7 @@ test.describe("INPREPORT-290: GET ProcessPerformanceMap Report Smoke Tests", () 
   });
 });
 
-test.describe("INPREPORT-291: GET ProcessPerformanceMap By Day Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-291: GET ProcessPerformanceMap By Day Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/ProcessPerformanceMap/dayReport";
 
   test("positive case", async ({ request }) => {
@@ -38,7 +38,7 @@ test.describe("INPREPORT-291: GET ProcessPerformanceMap By Day Report Smoke Test
   });
 });
 
-test.describe("INPREPORT-292: GET ProcessPerformanceMap By Shift Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-292: GET ProcessPerformanceMap By Shift Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/ProcessPerformanceMap/shiftReport";
 
   test("positive case", async ({ request }) => {
@@ -47,7 +47,7 @@ test.describe("INPREPORT-292: GET ProcessPerformanceMap By Shift Report Smoke Te
   });
 });
 
-test.describe("INPREPORT-293: GET ProcessPerformanceMap By Campaign Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-293: GET ProcessPerformanceMap By Campaign Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/ProcessPerformanceMap/campaignReport";
 
   test("positive case", async ({ request }) => {
@@ -56,7 +56,7 @@ test.describe("INPREPORT-293: GET ProcessPerformanceMap By Campaign Report Smoke
   });
 });
 
-test.describe("INPREPORT-294: GET ProcessPerformanceMap By Production Order Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-294: GET ProcessPerformanceMap By Production Order Report Smoke Tests", () => {
   const endpointName =
     "/inpReporting/v1/ProcessPerformanceMap/productionOrderReport";
 
@@ -66,7 +66,7 @@ test.describe("INPREPORT-294: GET ProcessPerformanceMap By Production Order Repo
   });
 });
 
-test.describe("INPREPORT-300: GET ProcessPerformanceMap Combit Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-300: GET ProcessPerformanceMap Combit Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/ProcessPerformanceMap/legacy/report";
 
   test("positive case", async ({ request }) => {

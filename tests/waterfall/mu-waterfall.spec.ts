@@ -60,7 +60,7 @@ const testCases = [
 ];
 // #endregion
 
-test.describe("INPREPORT-252: GET Waterfall Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-252: GET Waterfall Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/Waterfall/report";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -71,7 +71,7 @@ test.describe("INPREPORT-252: GET Waterfall Report Smoke Tests", () => {
   });
 });
 
-test.describe("INPREPORT-253: GET Waterfall By Day Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-253: GET Waterfall By Day Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/Waterfall/dayReport";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -82,7 +82,7 @@ test.describe("INPREPORT-253: GET Waterfall By Day Report Smoke Tests", () => {
   });
 });
 
-test.describe("INPREPORT-254: GET Waterfall By Shift Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-254: GET Waterfall By Shift Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/Waterfall/shiftReport";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -93,7 +93,7 @@ test.describe("INPREPORT-254: GET Waterfall By Shift Report Smoke Tests", () => 
   });
 });
 
-test.describe("INPREPORT-255: GET Waterfall By Campaign Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-255: GET Waterfall By Campaign Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/Waterfall/campaignReport";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -104,7 +104,7 @@ test.describe("INPREPORT-255: GET Waterfall By Campaign Report Smoke Tests", () 
   });
 });
 
-test.describe("INPREPORT-256: GET Waterfall By Production Order Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-256: GET Waterfall By Production Order Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/Waterfall/productionOrderReport";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -115,7 +115,7 @@ test.describe("INPREPORT-256: GET Waterfall By Production Order Report Smoke Tes
   });
 });
 
-test.describe("INPREPORT-310: GET Waterfall Combit Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-310: GET Waterfall Combit Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/Waterfall/legacy/report";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -126,7 +126,7 @@ test.describe("INPREPORT-310: GET Waterfall Combit Report Smoke Tests", () => {
   });
 });
 
-test.describe("INPREPORT-311: GET Waterfall By Production Order Combit Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-311: GET Waterfall By Production Order Combit Report Smoke Tests", () => {
   const endpointName =
     "/inpReporting/v1/Waterfall/legacy/productionOrderReport";
 

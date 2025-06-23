@@ -62,7 +62,7 @@ const testCases = [
 ];
 // #endregion
 
-test.describe("INPREPORT-277: GET TopReasonCode Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-277: GET TopReasonCode Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/TopReasonCode/reports";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -77,7 +77,7 @@ test.describe("INPREPORT-277: GET TopReasonCode Report Smoke Tests", () => {
   });
 });
 
-test.describe("INPREPORT-278: GET TopReasonCode By Day Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-278: GET TopReasonCode By Day Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/TopReasonCode/dayReports";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -92,7 +92,7 @@ test.describe("INPREPORT-278: GET TopReasonCode By Day Report Smoke Tests", () =
   });
 });
 
-test.describe("INPREPORT-279: GET TopReasonCode By Shift Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-279: GET TopReasonCode By Shift Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/TopReasonCode/shiftReports";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -107,7 +107,7 @@ test.describe("INPREPORT-279: GET TopReasonCode By Shift Report Smoke Tests", ()
   });
 });
 
-test.describe("INPREPORT-280: GET TopReasonCode By Campaign Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-280: GET TopReasonCode By Campaign Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/TopReasonCode/campaignReports";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -122,7 +122,7 @@ test.describe("INPREPORT-280: GET TopReasonCode By Campaign Report Smoke Tests",
   });
 });
 
-test.describe("INPREPORT-281: GET TopReasonCode By Production Order Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-281: GET TopReasonCode By Production Order Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/TopReasonCode/productionOrderReports";
 
   testCases.forEach(({ name, queryParams }) => {

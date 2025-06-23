@@ -60,7 +60,7 @@ const testCases = [
 ];
 // #endregion
 
-test.describe("INPREPORT-257: GET TopBadActor Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-257: GET TopBadActor Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/TopBadActor/report";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -71,7 +71,7 @@ test.describe("INPREPORT-257: GET TopBadActor Report Smoke Tests", () => {
   });
 });
 
-test.describe("INPREPORT-258: GET TopBadActor By Day Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-258: GET TopBadActor By Day Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/TopBadActor/dayReport";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -82,7 +82,7 @@ test.describe("INPREPORT-258: GET TopBadActor By Day Report Smoke Tests", () => 
   });
 });
 
-test.describe("INPREPORT-259: GET TopBadActor By Shift Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-259: GET TopBadActor By Shift Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/TopBadActor/shiftReport";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -93,7 +93,7 @@ test.describe("INPREPORT-259: GET TopBadActor By Shift Report Smoke Tests", () =
   });
 });
 
-test.describe("INPREPORT-260: GET TopBadActor By Campaign Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-260: GET TopBadActor By Campaign Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/TopBadActor/campaignReport";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -104,7 +104,7 @@ test.describe("INPREPORT-260: GET TopBadActor By Campaign Report Smoke Tests", (
   });
 });
 
-test.describe("INPREPORT-261: GET TopBadActor By Production Order Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-261: GET TopBadActor By Production Order Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/TopBadActor/productionOrderReport";
 
   testCases.forEach(({ name, queryParams }) => {
@@ -115,7 +115,7 @@ test.describe("INPREPORT-261: GET TopBadActor By Production Order Report Smoke T
   });
 });
 
-test.describe("INPREPORT-308: GET TopBadActor Combit Report Smoke Tests", () => {
+test.describe("@multi INPREPORT-308: GET TopBadActor Combit Report Smoke Tests", () => {
   const endpointName = "/inpReporting/v1/TopBadActor/legacy/report";
 
   testCases.forEach(({ name, queryParams }) => {

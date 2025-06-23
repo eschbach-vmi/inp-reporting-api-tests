@@ -1,21 +1,19 @@
 import test from "@playwright/test";
 import {
-  createRequestUrlWithStructureItems,
+  createRequestUrl,
   getEndpointSmokeTests,
 } from "../../helper/smoke-test-helper";
 import environment from "../../utils/environment";
 
 // #region
-const structureItemGuids = [
-  environment.MU_BATCH_STRUCTURE_ITEM_GUID,
-  environment.MU_CAMPAIGN_STRUCTURE_ITEM_GUID,
-];
+const structureItemGuid = environment.SU_PRODUCTION_STRUCTURE_ITEM_GUID;
 const startDateTime = "2025-04-01T00:00:00Z";
-const endDateTime = "2025-04-06T00:00:00Z";
-const module = "MultiUnit";
+const endDateTime = "2025-04-15T00:00:00Z";
+const module = "SingleUnit";
 
 // Define the query parameter objects
 const queryParamsBase = {
+  structureItemGuid: structureItemGuid,
   reportStartDateTime: startDateTime,
   reportEndDateTime: endDateTime,
   moduleIdentifier: module,
@@ -62,76 +60,79 @@ const testCases = [
 ];
 // #endregion
 
-test.describe("@multi INPREPORT-272: GET TopBadActor Report Smoke Tests", () => {
-  const endpointName = "/inpReporting/v1/TopBadActor/reports";
+test.describe("@single INPREPORT-252: GET Waterfall Report Smoke Tests", () => {
+  const endpointName = "/inpReporting/v1/Waterfall/report";
 
   testCases.forEach(({ name, queryParams }) => {
     test(name, async ({ request }) => {
-      const requestUrl = createRequestUrlWithStructureItems(
-        endpointName,
-        queryParams,
-        structureItemGuids
-      );
+      const requestUrl = createRequestUrl(endpointName, queryParams);
       await getEndpointSmokeTests(request, requestUrl);
     });
   });
 });
 
-test.describe("@multi INPREPORT-273: GET TopBadActor By Day Report Smoke Tests", () => {
-  const endpointName = "/inpReporting/v1/TopBadActor/dayReports";
+test.describe("@single INPREPORT-253: GET Waterfall By Day Report Smoke Tests", () => {
+  const endpointName = "/inpReporting/v1/Waterfall/dayReport";
 
   testCases.forEach(({ name, queryParams }) => {
     test(name, async ({ request }) => {
-      const requestUrl = createRequestUrlWithStructureItems(
-        endpointName,
-        queryParams,
-        structureItemGuids
-      );
+      const requestUrl = createRequestUrl(endpointName, queryParams);
       await getEndpointSmokeTests(request, requestUrl);
     });
   });
 });
 
-test.describe("@multi INPREPORT-274: GET TopBadActor By Shift Report Smoke Tests", () => {
-  const endpointName = "/inpReporting/v1/TopBadActor/shiftReports";
+test.describe("@single INPREPORT-254: GET Waterfall By Shift Report Smoke Tests", () => {
+  const endpointName = "/inpReporting/v1/Waterfall/shiftReport";
 
   testCases.forEach(({ name, queryParams }) => {
     test(name, async ({ request }) => {
-      const requestUrl = createRequestUrlWithStructureItems(
-        endpointName,
-        queryParams,
-        structureItemGuids
-      );
+      const requestUrl = createRequestUrl(endpointName, queryParams);
       await getEndpointSmokeTests(request, requestUrl);
     });
   });
 });
 
-test.describe("@multi INPREPORT-275: GET TopBadActor By Campaign Report Smoke Tests", () => {
-  const endpointName = "/inpReporting/v1/TopBadActor/campaignReports";
+test.describe("@single INPREPORT-255: GET Waterfall By Campaign Report Smoke Tests", () => {
+  const endpointName = "/inpReporting/v1/Waterfall/campaignReport";
 
   testCases.forEach(({ name, queryParams }) => {
     test(name, async ({ request }) => {
-      const requestUrl = createRequestUrlWithStructureItems(
-        endpointName,
-        queryParams,
-        structureItemGuids
-      );
+      const requestUrl = createRequestUrl(endpointName, queryParams);
       await getEndpointSmokeTests(request, requestUrl);
     });
   });
 });
 
-test.describe("@multi INPREPORT-276: GET TopBadActor By Production Order Report Smoke Tests", () => {
-  const endpointName = "/inpReporting/v1/TopBadActor/productionOrderReports";
+test.describe("@single INPREPORT-256: GET Waterfall By Production Order Report Smoke Tests", () => {
+  const endpointName = "/inpReporting/v1/Waterfall/productionOrderReport";
 
   testCases.forEach(({ name, queryParams }) => {
     test(name, async ({ request }) => {
-      const requestUrl = createRequestUrlWithStructureItems(
-        endpointName,
-        queryParams,
-        structureItemGuids
-      );
+      const requestUrl = createRequestUrl(endpointName, queryParams);
+      await getEndpointSmokeTests(request, requestUrl);
+    });
+  });
+});
+
+test.describe("@single INPREPORT-310: GET Waterfall Combit Report Smoke Tests", () => {
+  const endpointName = "/inpReporting/v1/Waterfall/legacy/report";
+
+  testCases.forEach(({ name, queryParams }) => {
+    test(name, async ({ request }) => {
+      const requestUrl = createRequestUrl(endpointName, queryParams);
+      await getEndpointSmokeTests(request, requestUrl);
+    });
+  });
+});
+
+test.describe("@single INPREPORT-311: GET Waterfall By Production Order Combit Report Smoke Tests", () => {
+  const endpointName =
+    "/inpReporting/v1/Waterfall/legacy/productionOrderReport";
+
+  testCases.forEach(({ name, queryParams }) => {
+    test(name, async ({ request }) => {
+      const requestUrl = createRequestUrl(endpointName, queryParams);
       await getEndpointSmokeTests(request, requestUrl);
     });
   });

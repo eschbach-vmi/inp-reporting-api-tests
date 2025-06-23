@@ -6,10 +6,10 @@ import {
 import environment from "../../utils/environment";
 
 // #region
-const structureItemGuid = environment.MU_BATCH_STRUCTURE_ITEM_GUID;
+const structureItemGuid = environment.SU_PRODUCTION_STRUCTURE_ITEM_GUID;
 const startDateTime = "2025-04-01T00:00:00Z";
 const endDateTime = "2025-04-15T00:00:00Z";
-const module = "MultiUnit";
+const module = "SingleUnit";
 
 // Define the query parameter objects
 const queryParamsBase = {
@@ -60,8 +60,8 @@ const testCases = [
 ];
 // #endregion
 
-test.describe("@multi INPREPORT-262: GET TopReasonCode Report Smoke Tests", () => {
-  const endpointName = "/inpReporting/v1/TopReasonCode/report";
+test.describe("@single INPREPORT-257: GET TopBadActor Report Smoke Tests", () => {
+  const endpointName = "/inpReporting/v1/TopBadActor/report";
 
   testCases.forEach(({ name, queryParams }) => {
     test(name, async ({ request }) => {
@@ -71,8 +71,8 @@ test.describe("@multi INPREPORT-262: GET TopReasonCode Report Smoke Tests", () =
   });
 });
 
-test.describe("@multi INPREPORT-263: GET TopReasonCode By Day Report Smoke Tests", () => {
-  const endpointName = "/inpReporting/v1/TopReasonCode/dayReport";
+test.describe("@single INPREPORT-258: GET TopBadActor By Day Report Smoke Tests", () => {
+  const endpointName = "/inpReporting/v1/TopBadActor/dayReport";
 
   testCases.forEach(({ name, queryParams }) => {
     test(name, async ({ request }) => {
@@ -82,8 +82,8 @@ test.describe("@multi INPREPORT-263: GET TopReasonCode By Day Report Smoke Tests
   });
 });
 
-test.describe("@multi INPREPORT-264: GET TopReasonCode By Shift Report Smoke Tests", () => {
-  const endpointName = "/inpReporting/v1/TopReasonCode/shiftReport";
+test.describe("@single INPREPORT-259: GET TopBadActor By Shift Report Smoke Tests", () => {
+  const endpointName = "/inpReporting/v1/TopBadActor/shiftReport";
 
   testCases.forEach(({ name, queryParams }) => {
     test(name, async ({ request }) => {
@@ -93,8 +93,8 @@ test.describe("@multi INPREPORT-264: GET TopReasonCode By Shift Report Smoke Tes
   });
 });
 
-test.describe("@multi INPREPORT-265: GET TopReasonCode By Campaign Report Smoke Tests", () => {
-  const endpointName = "/inpReporting/v1/TopReasonCode/campaignReport";
+test.describe("@single INPREPORT-260: GET TopBadActor By Campaign Report Smoke Tests", () => {
+  const endpointName = "/inpReporting/v1/TopBadActor/campaignReport";
 
   testCases.forEach(({ name, queryParams }) => {
     test(name, async ({ request }) => {
@@ -104,8 +104,8 @@ test.describe("@multi INPREPORT-265: GET TopReasonCode By Campaign Report Smoke 
   });
 });
 
-test.describe("@multi INPREPORT-266: GET TopReasonCode By Production Order Report Smoke Tests", () => {
-  const endpointName = "/inpReporting/v1/TopReasonCode/productionOrderReport";
+test.describe("@single INPREPORT-261: GET TopBadActor By Production Order Report Smoke Tests", () => {
+  const endpointName = "/inpReporting/v1/TopBadActor/productionOrderReport";
 
   testCases.forEach(({ name, queryParams }) => {
     test(name, async ({ request }) => {
@@ -115,8 +115,8 @@ test.describe("@multi INPREPORT-266: GET TopReasonCode By Production Order Repor
   });
 });
 
-test.describe("@multi INPREPORT-310: GET TopReasonCode Combit Report Smoke Tests", () => {
-  const endpointName = "/inpReporting/v1/TopReasonCode/legacy/report";
+test.describe("@single INPREPORT-308: GET TopBadActor Combit Report Smoke Tests", () => {
+  const endpointName = "/inpReporting/v1/TopBadActor/legacy/report";
 
   testCases.forEach(({ name, queryParams }) => {
     test(name, async ({ request }) => {
@@ -126,9 +126,9 @@ test.describe("@multi INPREPORT-310: GET TopReasonCode Combit Report Smoke Tests
   });
 });
 
-test.describe("@multi INPREPORT-311: GET TopReasonCode By Production Order Combit Report Smoke Tests", () => {
+test.describe("INPREPORT-309: GET TopBadActor By Production Order Combit Report Smoke Tests", () => {
   const endpointName =
-    "/inpReporting/v1/TopReasonCode/legacy/productionOrderReport";
+    "/inpReporting/v1/TopBadActor/legacy/productionOrderReport";
 
   testCases.forEach(({ name, queryParams }) => {
     test(name, async ({ request }) => {
